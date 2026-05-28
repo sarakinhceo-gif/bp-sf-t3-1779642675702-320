@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보 - 서버 웜업 전문가 | 화곡 셔츠룸</title>
+    <meta name="description" content="서버 웜업 기술부터 화곡 셔츠룸까지. 마포 서버 전문가가 알려주는 퍼포먼스 부스팅 노하우. 지금 바로 상담 예약 010-6279-0862">
+    <meta name="keywords" content="화곡 셔츠룸, 서버 웜업, 마포 서버 최적화, 서버 성능 향상, 홈페이지 로딩 속도">
+    <meta name="author" content="화곡 셔츠룸">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sf-t3-1779642675702-320.pages.dev/info">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta property="og:title" content="서버 웜업의 정석 - 화곡 셔츠룸 정보">
+    <meta property="og:description" content="마포 서버 전문가가 알려주는 진짜 서버 웜업 기술. 화곡 셔츠룸에서 경험하세요.">
+    <meta property="og:image" content="https://sf-t3-1779642675702-320.pages.dev/assets/og-info.jpg">
+    <meta property="og:url" content="https://sf-t3-1779642675702-320.pages.dev/info">
+    <meta property="og:type" content="website">
+    <style>
+        /* === BRUTALIST DESIGN SYSTEM v2.4 === */
+        :root {
+            --bg: #0a0a0a;
+            --text: #e0e0e0;
+            --accent: #ff00ff;
+            --accent2: #00ffff;
+            --border: #2a2a2a;
+            --glow: 0 0 8px var(--accent);
+            --font-impact: 'Impact', 'Arial Black', sans-serif;
+            --font-mono: 'Courier New', monospace;
+            --spacing: 2.5rem;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            padding: 0 5%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* 헤더 + 내비게이션 */
+        .header {
+            padding: 1.5rem 0;
+            border-bottom: 3px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-family: var(--font-impact);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            text-shadow: var(--glow);
+        }
+        .logo span {
+            color: var(--accent2);
+        }
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+            padding-bottom: 4px;
+        }
+        .nav a:hover,
+        .nav a.active {
+            border-bottom-color: var(--accent);
+            color: var(--accent);
+        }
+        /* 햄버거 메뉴 (반응형) */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: var(--accent);
+            transition: 0.3s;
+        }
+        /* 메인 콘텐츠 */
+        .main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+        .page-title {
+            font-family: var(--font-impact);
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+        .page-sub {
+            color: var(--accent2);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: #141414;
+            border: 2px solid var(--border);
+            padding: 1.8rem;
+            transition: 0.2s;
+        }
+        .card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+        }
+        .card h3 {
+            font-family: var(--font-impact);
+            font-size: 1.6rem;
+            color: var(--accent2);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .card p {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+        .card .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            font-weight: bold;
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+        .faq-item {
+            border-top: 1px solid var(--border);
+            padding: 1.2rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-q {
+            font-family: var(--font-impact);
+            font-size: 1.2rem;
+            color: var(--accent);
+            cursor: default;
+            margin-bottom: 0.4rem;
+        }
+        .faq-a {
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+        .cta-box {
+            background: #1a1a1a;
+            border: 3px solid var(--accent2);
+            padding: 2rem;
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+        .cta-box h2 {
+            font-family: var(--font-impact);
+            font-size: 2.2rem;
+            color: var(--accent2);
+            text-transform: uppercase;
+        }
+        .cta-phone {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin: 0.8rem 0;
+        }
+        .cta-phone a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .cta-phone a:hover {
+            text-decoration: underline;
+        }
+        /* 푸터 */
+        .footer {
+            border-top: 3px solid var(--border);
+            padding: 1.8rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .footer a {
+            color: var(--accent2);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* 반응형 768px */
+        @media (max-width: 768px) {
+            .responsive-768 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0.8rem;
+                padding: 1rem 0;
+                background: #0a0a0a;
+                border-top: 2px solid var(--border);
+            }
+            .nav.open {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .page-title {
+                font-size: 2.5rem;
+            }
+            .cta-box h2 {
+                font-size: 1.6rem;
+            }
+            .cta-phone {
+                font-size: 1.5rem;
+            }
+            .header {
+                flex-wrap: wrap;
+            }
+        }
+        @media (max-width: 480px) {
+            body { padding: 0 4%; }
+            .logo { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="logo">화곡<span>셔츠룸</span></div>
+        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="mainNav">
+            <a href="/">홈</a>
+            <a href="/info" class="active">정보</a>
+            <a href="/service">서비스</a>
+            <a href="/contact">연락처</a>
+        </nav>
+    </header>
+
+    <!-- 메인 -->
+    <main class="main">
+        <h1 class="page-title">서버 웜업의 진실</h1>
+        <div class="page-sub">마포 서버 전문가가 말하는 성능 부스팅의 정석 — 화곡 셔츠룸만의 노하우</div>
+
+        <!-- 소개 섹션 -->
+        <section class="card" style="margin-bottom: 2rem;">
+            <span class="badge">🔥 마포 #1</span>
+            <h3>왜 서버 웜업이 중요한가?</h3>
+            <p>당신의 홈페이지가 느리다고? 서버가 식어있기 때문이다. 웜업은 단순한 기술이 아니라 생존 전략이다. 화곡 셔츠룸은 서버의 체온을 0.1초 만에 끌어올리는 기술을 보유했다. 결과는? 사용자는 기다리지 않는다. 이탈률은 곧 매출 손실이다.</p>
+            <p>우리는 규범에 도전한다. "웜업은 선택"이라는 말은 거짓말이다. 필수다. 마포에서 우리만 아는 방법으로 서버를 예열하고, 화곡 셔츠룸의 노하우로 최적화하라.</p>
+        </section>
+
+        <!-- 그리드 -->
+        <div class="grid-2">
+            <div class="card">
+                <span class="badge">⚡ 퍼포먼스</span>
+                <h3>3단계 웜업 프로토콜</h3>
+                <p><strong>1단계:</strong> 데이터베이스 프리로드. 캐시를 강제로 채워 넣는다. 소극적인 LRU? 아니. 우리는 적극적으로 밀어넣는다.</p>
+                <p><strong>2단계:</strong> JIT 컴파일러 예열. 자주 호출되는 코드를 미리 실행해 바이너리 최적화. 이론은 끝. 실행만 남았다.</p>
+                <p><strong>3단계:</strong> 연결 풀 웜업. DB, Redis, 외부 API. 모든 커넥션을 대기시킨다. 첫 요청부터 풀 스로틀.</p>
+            </div>
+            <div class="card">
+                <span class="badge">📍 지역 시그널</span>
+                <h3>마포에서 화곡까지</h3>
+                <p>우리는 마포에 기반을 두고 있다. 서버도 사람도 위치가 곧 성능이다. 화곡 셔츠룸은 지역 최적화의 끝판왕. 마포 데이터센터
+</body>
+</html>
