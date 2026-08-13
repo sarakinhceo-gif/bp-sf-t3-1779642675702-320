@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · sf-t3-1779642675702-320</title>
+  <meta name="description" content="sf-t3-1779642675702-320에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-320.maphoshirts.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* === BRUTALIST DESIGN SYSTEM v2.4 === */
+ :root {
+ --bg: #0a0a0a;
+ --text: #e0e0e0;
+ --accent: #ff00ff;
+ --accent2: #00ffff;
+ --border: #2a2a2a;
+ --glow: 0 0 8px var(--accent);
+ --font-impact: 'Impact', 'Arial Black', sans-serif;
+ --font-mono: 'Courier New', monospace;
+ --spacing: 2.5rem;
+ }
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ background: var(--bg);
+ color: var(--text);
+ font-family: var(--font-mono);
+ line-height: 1.6;
+ padding: 0 5%;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ }
+ /* 헤더 + 내비게이션 */
+ .header {
+ padding: 1.5rem 0;
+ border-bottom: 3px solid var(--border);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+ .logo {
+ font-family: var(--font-impact);
+ font-size: 2rem;
+ text-transform: uppercase;
+ letter-spacing: 4px;
+ color: var(--accent);
+ text-shadow: var(--glow);
+ }
+ .logo span {
+ color: var(--accent2);
+ }
+ .nav {
+ display: flex;
+ gap: 2rem;
+ }
+ .nav a {
+ color: var(--text);
+ text-decoration: none;
+ font-size: 1rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ border-bottom: 2px solid transparent;
+ transition: 0.2s;
+ padding-bottom: 4px;
+ }
+ .nav a:hover,
+ .nav a.active {
+ border-bottom-color: var(--accent);
+ color: var(--accent);
+ }
+ /* 햄버거 메뉴 (반응형) */
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 8px;
+ }
+ .hamburger-menu span {
+ display: block;
+ width: 28px;
+ height: 3px;
+ background: var(--accent);
+ transition: 0.3s;
+ }
+ /* 메인 콘텐츠 */
+ .main {
+ flex: 1;
+ padding: 3rem 0;
+ }
+ .page-title {
+ font-family: var(--font-impact);
+ font-size: 3.5rem;
+ text-transform: uppercase;
+ color: var(--accent);
+ margin-bottom: 0.5rem;
+ line-height: 1.1;
+ letter-spacing: -1px;
+ }
+ .page-sub {
+ color: var(--accent2);
+ font-size: 1.1rem;
+ margin-bottom: 2.5rem;
+ border-left: 4px solid var(--accent);
+ padding-left: 1rem;
+ }
+ .grid-2 {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2rem;
+ margin: 2rem 0;
+ }
+ .card {
+ background: #141414;
+ border: 2px solid var(--border);
+ padding: 1.8rem;
+ transition: 0.2s;
+ }
+ .card:hover {
+ border-color: var(--accent);
+ box-shadow: var(--glow);
+ }
+ .card h3 {
+ font-family: var(--font-impact);
+ font-size: 1.6rem;
+ color: var(--accent2);
+ margin-bottom: 1rem;
+ text-transform: uppercase;
+ }
+ .card p {
+ margin-bottom: 0.8rem;
+ font-size: 0.95rem;
+ }
+ .card .badge {
+ display: inline-block;
+ background: var(--accent);
+ color: #000;
+ font-weight: bold;
+ padding: 2px 10px;
+ font-size: 0.75rem;
+ text-transform: uppercase;
+ margin-bottom: 0.8rem;
+ }
+ .faq-item {
+ border-top: 1px solid var(--border);
+ padding: 1.2rem 0;
+ }
+ .faq-item:last-child {
+ border-bottom: 1px solid var(--border);
+ }
+ .faq-q {
+ font-family: var(--font-impact);
+ font-size: 1.2rem;
+ color: var(--accent);
+ cursor: default;
+ margin-bottom: 0.4rem;
+ }
+ .faq-a {
+ color: #bbb;
+ font-size: 0.95rem;
+ }
+ .cta-box {
+ background: #1a1a1a;
+ border: 3px solid var(--accent2);
+ padding: 2rem;
+ text-align: center;
+ margin: 2.5rem 0;
+ }
+ .cta-box h2 {
+ font-family: var(--font-impact);
+ font-size: 2.2rem;
+ color: var(--accent2);
+ text-transform: uppercase;
+ }
+ .cta-phone {
+ font-size: 2rem;
+ font-weight: bold;
+ color: var(--accent);
+ letter-spacing: 2px;
+ margin: 0.8rem 0;
+ }
+ .cta-phone a {
+ color: inherit;
+ text-decoration: none;
+ }
+ .cta-phone a:hover {
+ text-decoration: underline;
+ }
+ /* 푸터 */
+ .footer {
+ border-top: 3px solid var(--border);
+ padding: 1.8rem 0;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 1rem;
+ font-size: 0.85rem;
+ color: #666;
+ }
+ .footer a {
+ color: var(--accent2);
+ text-decoration: none;
+ }
+ .footer a:hover {
+ text-decoration: underline;
+ }
+ /* 반응형 768px */
+ @media (max-width: 768px) {
+ .responsive-768 {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+ .nav {
+ display: none;
+ width: 100%;
+ flex-direction: column;
+ gap: 0.8rem;
+ padding: 1rem 0;
+ background: #0a0a0a;
+ border-top: 2px solid var(--border);
+ }
+ .nav.open {
+ display: flex;
+ }
+ .hamburger-menu {
+ display: flex;
+ }
+ .grid-2 {
+ grid-template-columns: 1fr;
+ }
+ .page-title {
+ font-size: 2.5rem;
+ }
+ .cta-box h2 {
+ font-size: 1.6rem;
+ }
+ .cta-phone {
+ font-size: 1.5rem;
+ }
+ .header {
+ flex-wrap: wrap;
+ }
+ }
+ @media (max-width: 480px) {
+ body { padding: 0 4%; }
+ .logo { font-size: 1.5rem; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · sf-t3-1779642675702-320">
+  <meta property="og:description" content="sf-t3-1779642675702-320에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-320.maphoshirts.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+ <div class="logo">화곡<span>셔츠룸</span></div>
+ <button class="hamburger-menu" aria-label="메뉴 열기" onclick="toggleNav()">
+ 
+ </button>
+ <nav class="nav" id="mainNav">
+ <a href="/">홈</a>
+ <a href="/info" class="active">정보</a>
+ <a href="/service">서비스</a>
+ <a href="/contact">연락처</a>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 34개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0147.html">화곡 셔츠룸 환경과 마포 코인노래방 방음 시설 비교 가이드</a>
+        <p class="post-item__summary">쾌적한 음악 감상과 대화를 위해서는 기본적으로 충족되어야 할 환경 조건들이 있습니다. 특히 화곡 셔츠룸과 같이 공간의 밀도가 높은 환경에서는 외부 소음 차단과 공기 순환이 매우 중요합니다. 이는 방</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0364.html">화곡 셔츠룸 검색보다 중요한 성공적인 공덕 가라오케 추천정보 비교 기준</a>
+        <p class="post-item__summary">혹시 화곡 셔츠룸 정보를 찾다가 공덕 지역의 가라오케 방문을 고민하게 되셨나요? 수많은 업소들 사이에서 나에게 딱 맞는 곳을 고르려면 도대체 어떤 기준을 세워야 할지 막막할 때가 많을 것입니다. 시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0365.html">화곡 셔츠룸 이용객이 알아야 할 상수 마사지 추천정보와 신뢰성 판단</a>
+        <p class="post-item__summary">일상의 피로를 풀기 위해 화곡 셔츠룸 방문 이후 적절한 휴식처를 찾는 분들이 늘고 있습니다. 특히 상수는 교통이 편리하고 다양한 힐링 공간이 밀집해 있어 많은 이들이 선호하는 지역입니다. 본인의 컨</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0366.html">화곡 셔츠룸만큼 강렬한 망원 노래방 추천정보와 가격 설정 기준</a>
+        <p class="post-item__summary">바쁜 도심 속에서 화곡 셔츠룸 이후 여운을 즐기고자 망원을 찾는 분들이 많습니다. 이곳은 다양한 노래방이 형성되어 있어 선택의 폭이 매우 넓은 지역입니다. 즐거운 시간을 위해 자신에게 맞는 업소를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0367.html">화곡 셔츠룸 방문자가 자주 실수하는 홍대 노래방 추천정보 예약법</a>
+        <p class="post-item__summary">많은 이들이 화곡 셔츠룸 일정을 소화한 뒤 홍대 노래방을 방문하곤 합니다. 하지만 예약 절차를 간과하여 현장에서 큰 낭패를 보는 경우가 생각보다 많습니다. 성공적인 저녁 시간을 위해 실패하는 지점을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0368.html">화곡 셔츠룸 애호가를 위한 공덕 셔츠룸 추천정보와 위치 확인 체크리스트</a>
+        <p class="post-item__summary">화곡 셔츠룸 이용 경험이 있는 분들이 공덕 주변의 새로운 공간을 찾을 때 고려할 사항들이 있습니다. 특히 위치와 접근성은 전체적인 만족도를 결정짓는 가장 중요한 요소 중 하나입니다. 이번 체크리스트</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0369.html">화곡 셔츠룸 방문객을 위한 연남 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">처음 낯선 지역에서 저녁 시간을 보내려 할 때 막막함을 느끼는 경우가 많습니다. 특히 화곡 셔츠룸 형태의 시스템에 익숙한 사람이라면 연남 일대에서 어떤 선택을 해야 할지 고민이 깊어집니다. 검증되지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0370.html">화곡 셔츠룸 이용자와 마곡 가라오케 추천정보 분석</a>
+        <p class="post-item__summary">흔히 밤 시간대에는 어디를 가도 비슷할 것이라는 오해를 하는 분들이 많습니다. 하지만 화곡 셔츠룸의 환경과 마곡 가라오케의 서비스는 운영 방식부터 크게 차이가 납니다. 서비스의 본질을 이해하지 못하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0371.html">화곡 셔츠룸 마니아를 위한 마곡 유흥 추천정보 활용법</a>
+        <p class="post-item__summary">원활한 저녁 시간을 위해서는 공간의 규모, 음향 설비, 직원의 접객 서비스라는 세 가지 충족 조건이 필수입니다. 화곡 셔츠룸 환경에 익숙해진 상태라면 마곡 지역의 유흥 시설이 제시하는 기준을 더 엄</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0372.html">화곡 셔츠룸보다 나은 합정 노래방 추천정보 비교 기준</a>
+        <p class="post-item__summary">지금 방문하려는 곳이 당신의 소중한 시간을 온전히 보장해 줄 수 있는지 생각해 본 적 있으신가요. 화곡 셔츠룸 시스템과 비교하여 합정의 노래방 환경은 어떤 차별점을 지니고 있는지 궁금할 것입니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0373.html">화곡 셔츠룸 방문객이 꼭 알아야 할 연남 클럽 추천정보 활용법</a>
+        <p class="post-item__summary">최근 화곡 셔츠룸 경험을 가진 분들이 분위기 전환을 위해 연남동을 찾는 사례가 늘고 있습니다. 다만 수많은 업소 사이에서 진짜 가치 있는 정보를 골라내는 작업은 쉽지 않은 과제입니다. 신뢰할 수 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0374.html">화곡 셔츠룸 대비 합정 셔츠룸 추천정보 확인 및 가격 합리성 판단 기준</a>
+        <p class="post-item__summary">화곡 셔츠룸 인근 지역을 고려하다 보면 자연스럽게 합정 지역과 가격대를 비교하게 됩니다. 각 지역마다 지불하는 비용에 포함된 서비스 범위가 다르기 때문에 가격을 단순히 숫자로만 비교하는 것은 위험합</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-1s0vuzv.html">화곡 셔츠룸 경험자에게 물어본 현실적인 판단 기준</a>
+        <p class="post-item__summary">유흥이나 여가 문화를 선택할 때 많은 사람들이 실패를 줄이기 위해 기존 경험자들의 의견을 묻곤 합니다. 특히 화곡 셔츠룸과 같은 공간을 이용해 본 사람들은 단순히 화려한 외관이나 광고에 속지 말고 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-002-1s0vuzv.html">프레시지 마라 치킨 밀키트 2021년 배합비 변화 실패 사례 분석 및 재발 방지를 위한 원칙 도출</a>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
